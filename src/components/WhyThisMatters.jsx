@@ -1,4 +1,4 @@
-import "../styles/whyThisMatters.css";
+import "../styles/WhyThisMatters.css";
 
 function WhyThisMatters() {
   return (
