@@ -5,7 +5,7 @@ import WhyThisMatters from "./components/WhyThisMatters";
 import HowItWorks from "./components/HowItWorks";
 import WhoThisIsFor from "./components/WhoThisIsFor";
 import TrustSection from "./components/TrustSection";
-import FinalCta from "./components/FinalCta";
+import FinalCTA from "./components/FinalCTA";
 
 import Footer from "./components/Footer";
 
@@ -21,7 +21,8 @@ function App() {
        <HowItWorks/>
        <WhoThisIsFor/>
        <TrustSection/>
-      <FinalCta/>
+      <FinalCTA />
+
       <Footer/>
       
     </>
