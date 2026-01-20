@@ -1,6 +1,6 @@
 import "../styles/FinalCta.css";
 
-function FinalCTA() {
+function FinalCta() {
   return (
     <section
       className="final-cta"
@@ -25,4 +25,4 @@ function FinalCTA() {
   );
 }
 
-export default FinalCTA;
+export default FinalCta;
