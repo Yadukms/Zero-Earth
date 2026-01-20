@@ -1,4 +1,4 @@
-import "../styles/final-cta.css";
+import "../styles/FinalCta.css";
 
 function FinalCTA() {
   return (
