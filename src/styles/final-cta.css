@@ -1,0 +1,129 @@
+/* ===============================
+   SECTION BASE
+================================ */
+.final-cta {
+  position: relative;
+  min-height: 70vh;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ===============================
+   OVERLAY (LIGHT, NOT DARK)
+================================ */
+.final-cta-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(15, 31, 24, 0.28);
+}
+
+/* ===============================
+   CONTENT
+================================ */
+.final-cta-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+  padding: 0 80px;
+
+  color: #ffffff;
+}
+
+/* ===============================
+   HEADING
+================================ */
+.final-cta-content h2 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(2px);
+
+  animation: fadeUpClean 0.7s ease forwards;
+}
+
+/* ===============================
+   SUBTEXT
+================================ */
+.final-cta-content p {
+  margin-top: 16px;
+  max-width: 520px;
+
+  font-size: 1.05rem;
+  opacity: 0.9;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: fadeUpClean 0.7s ease forwards;
+  animation-delay: 0.15s;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.final-cta-btn {
+  margin-top: 36px;
+  padding: 14px 32px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  background-color: #7bcf9a;
+  color: #0f1f18;
+
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+
+  opacity: 0;
+  transform: translateY(18px);
+
+  animation: fadeUpClean 0.7s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.final-cta-btn:hover {
+  background-color: #6bbf8a;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes fadeUpClean {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .final-cta {
+    min-height: 80vh;
+  }
+
+  .final-cta-content {
+    padding: 0 24px;
+  }
+}

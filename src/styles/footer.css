@@ -1,0 +1,113 @@
+/* ===============================
+   FOOTER BASE
+================================ */
+.footer {
+  background-color:   
+#2d3229; /* warm charcoal / earth tone */
+  color: #ffffff;
+
+  padding: 72px 0 32px;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 64px;
+}
+
+/* ===============================
+   BRAND
+================================ */
+.footer-brand h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.footer-brand p {
+  margin-top: 14px;
+  max-width: 360px;
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===============================
+   LINKS GRID
+================================ */
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.footer-column h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer-column a {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+/* CTA link */
+.footer-cta {
+  font-weight: 600;
+  color: #7bcf9a;
+}
+
+.footer-cta:hover {
+  color: #9fe3bb;
+}
+
+/* ===============================
+   BOTTOM BAR
+================================ */
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

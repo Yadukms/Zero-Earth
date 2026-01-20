@@ -1,0 +1,129 @@
+/* ===============================
+   SECTION BASE
+================================ */
+.how-section {
+  padding: 110px 0;
+  background: linear-gradient(
+    180deg,
+    #f6f8f7 0%,
+    #eef2ef 100%
+  );
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.how-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===============================
+   TITLE
+================================ */
+.how-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #1f2933;
+}
+
+.how-subtitle {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  color: #5b6b63;
+}
+
+/* ===============================
+   CARDS GRID
+================================ */
+.how-cards {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ===============================
+   CARD
+================================ */
+.how-card {
+  position: relative;
+  height: 300px;
+  border-radius: 16px;
+
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.18);
+}
+
+/* subtle image zoom */
+.how-card:hover {
+  background-size: 104%;
+}
+
+/* ===============================
+   OVERLAY
+================================ */
+.how-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 31, 24, 0.25),
+    rgba(15, 31, 24, 0.75)
+  );
+  transition: background 0.3s ease;
+}
+
+.how-card:hover .how-card-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 31, 24, 0.2),
+    rgba(15, 31, 24, 0.8)
+  );
+}
+
+/* ===============================
+   CARD CONTENT
+================================ */
+.how-card-content {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  color: #ffffff;
+}
+
+.how-card-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.how-card-content p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .how-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .how-card {
+    height: 260px;
+  }
+}

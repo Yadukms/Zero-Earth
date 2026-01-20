@@ -1,0 +1,172 @@
+/* ===============================
+   SECTION BASE
+================================ */
+.who-section {
+  padding: 120px 0;
+  background: linear-gradient(
+    to bottom,
+    #f7f9f8,
+    #eef2ef
+  );
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.who-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===============================
+   HEADING
+================================ */
+.who-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0f1f18;
+  margin-bottom: 12px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.who-subtitle {
+  font-size: 1.05rem;
+  color: #4b5f55;
+  margin-bottom: 56px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.15s;
+}
+
+/* ===============================
+   GRID
+================================ */
+.who-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ===============================
+   CARD
+================================ */
+.who-card {
+  position: relative;
+  height: 340px;
+  border-radius: 18px;
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.who-card:nth-child(1) { animation-delay: 0.25s; }
+.who-card:nth-child(2) { animation-delay: 0.4s; }
+.who-card:nth-child(3) { animation-delay: 0.55s; }
+
+/* ===============================
+   IMAGE OVERLAY
+================================ */
+.who-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 31, 24, 0.15),
+    rgba(15, 31, 24, 0.75)
+  );
+
+  transition: background 0.3s ease;
+}
+
+/* ===============================
+   CONTENT
+================================ */
+.who-content {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  right: 28px;
+  z-index: 2;
+
+  color: #ffffff;
+}
+
+.who-content h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.who-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.85;
+
+  transform: translateY(10px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ===============================
+   HOVER EFFECTS
+================================ */
+.who-card:hover {
+  transform: translateY(-6px);
+}
+
+.who-card:hover {
+  background-size: 108%;
+}
+
+.who-card:hover .who-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 31, 24, 0.05),
+    rgba(15, 31, 24, 0.7)
+  );
+}
+
+.who-card:hover h3,
+.who-card:hover p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .who-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .who-card {
+    height: 280px;
+  }
+}
